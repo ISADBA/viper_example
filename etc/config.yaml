@@ -1,0 +1,21 @@
+app:
+    name: viper_example
+    port: "9090"
+app_name: env_app_name
+config_name: env_config_name
+config_version: flag_config_version
+databases:
+    mysql: true
+    redis: true
+    sqlite: true
+log:
+    format: text
+    level: debug
+    output: stdout
+repository:
+    - dialector: mysql
+      name: viper_example
+      url: mysql://root:root@localhost:3306/viper_example
+    - dialector: sqlite
+      name: viper_example_2
+      url: sqlite:///viper_example_2.db
